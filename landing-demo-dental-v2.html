@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parkview Dental · Modern Family Dentistry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Huashu-Design core: proper typography, anti-slop, one detail at 120% */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,sans-serif;background:#fcf9f6;color:#1a1a1a;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+  /* ── Container ── */
+  .container{max-width:1200px;margin:0 auto;padding:0 32px}
+
+  /* ── Nav ── */
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1200px;margin:0 auto}
+  .logo{font-family:'DM Serif Display',serif;font-size:22px;color:#1a1a1a;letter-spacing:-.01em}
+  .logo em{font-style:italic;color:#8b7355}
+  nav .nav-links{display:flex;gap:28px;list-style:none;font-size:14px;color:#5a5a5a}
+  nav .nav-links a{text-decoration:none;color:inherit;transition:color .2s}
+  nav .nav-links a:hover{color:#1a1a1a}
+  .nav-cta{font-size:13px;font-weight:500;padding:10px 22px;background:#1a1a1a;color:#fff;border-radius:6px;text-decoration:none;transition:background .2s}
+  .nav-cta:hover{background:#333}
+
+  /* ── Hero ── */
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:60px 0 100px;align-items:center}
+  .hero-content h1{font-family:'DM Serif Display',serif;font-size:52px;font-weight:400;line-height:1.08;letter-spacing:-.02em;margin-bottom:20px}
+  .hero-content h1 .accent{color:#8b7355;font-style:italic}
+  .hero-content .sub{font-size:18px;color:#5a5a5a;line-height:1.6;margin-bottom:32px;max-width:480px}
+  .hero-cta-group{display:flex;gap:16px;align-items:center}
+  .btn-primary{display:inline-block;padding:14px 32px;background:#1a1a1a;color:#fff;border-radius:8px;text-decoration:none;font-size:15px;font-weight:500;transition:background .2s}
+  .btn-primary:hover{background:#333}
+  .btn-secondary{display:inline-block;padding:14px 32px;border:1px solid #d4c8b8;border-radius:8px;text-decoration:none;font-size:15px;color:#4a4a4a;transition:all .2s}
+  .btn-secondary:hover{border-color:#8b7355;color:#8b7355}
+  .hero-stats{display:flex;gap:40px;margin-top:40px}
+  .hero-stat{text-align:center}
+  .hero-stat .num{font-family:'DM Serif Display',serif;font-size:28px;color:#8b7355}
+  .hero-stat .label{font-size:12px;color:#7a7a7a;margin-top:2px;letter-spacing:.03em}
+  .hero-image{position:relative;display:flex;align-items:center;justify-content:center}
+  .hero-img-wrap{width:100%;max-width:500px;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#e8e0d4;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.06)}
+  .hero-img-wrap .img-placeholder{
+    width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,#e8e0d4 0%,#d4c8b8 100%);color:#8a7a6a;font-size:14px;letter-spacing:.05em
+  }
+  .hero-img-wrap .img-placeholder span{font-size:48px;margin-bottom:12px}
+
+  /* ── Trust Bar ── */
+  .trust-bar{text-align:center;padding:40px 0 60px}
+  .trust-bar p{font-size:12px;font-weight:500;letter-spacing:.12em;color:#8a8a8a;text-transform:uppercase;margin-bottom:24px}
+  .trust-logos{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+  .trust-logo{font-size:13px;color:#aaa;letter-spacing:.05em;font-weight:500}
+
+  /* ── Services ── */
+  .services{background:#fff;padding:100px 0;border-radius:24px 24px 0 0}
+  .services .section-label{font-size:11px;font-weight:600;letter-spacing:.15em;color:#8b7355;text-transform:uppercase;margin-bottom:8px;text-align:center}
+  .services h2{font-family:'DM Serif Display',serif;font-size:36px;font-weight:400;text-align:center;margin-bottom:16px}
+  .services .section-sub{text-align:center;color:#7a7a7a;font-size:15px;margin-bottom:60px}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .service-card{padding:36px 28px;border-radius:12px;border:1px solid #f0ece6;transition:all .3s}
+  .service-card:hover{border-color:#d4c8b8;box-shadow:0 8px 32px rgba(0,0,0,.04)}
+  .service-icon{font-size:28px;display:block;margin-bottom:16px}
+  .service-card h3{font-size:17px;font-weight:600;margin-bottom:8px}
+  .service-card p{font-size:14px;color:#6a6a6a;line-height:1.6}
+  .service-card .price{font-size:13px;color:#8b7355;margin-top:12px;font-weight:500}
+
+  /* ── Testimonials ── */
+  .testimonials{padding:100px 0;background:#fcf9f6}
+  .testimonials .section-label{font-size:11px;font-weight:600;letter-spacing:.15em;color:#8b7355;text-transform:uppercase;margin-bottom:8px;text-align:center}
+  .testimonials h2{font-family:'DM Serif Display',serif;font-size:36px;font-weight:400;text-align:center;margin-bottom:60px}
+  .testimonial-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:800px;margin:0 auto}
+  .testimonial-card{padding:32px;background:#fff;border-radius:12px;border:1px solid #f0ece6}
+  .testimonial-card .stars{color:#d4a05a;font-size:16px;margin-bottom:12px;letter-spacing:4px}
+  .testimonial-card .text{font-size:15px;color:#4a4a4a;line-height:1.7;margin-bottom:16px;font-style:italic}
+  .testimonial-card .author{font-size:13px;font-weight:600}
+  .testimonial-card .author span{font-weight:400;color:#8a8a8a}
+
+  /* ── CTA ── */
+  .cta-section{text-align:center;padding:100px 0;background:#1a1a1a;border-radius:0 0 24px 24px}
+  .cta-section h2{font-family:'DM Serif Display',serif;font-size:40px;font-weight:400;color:#f5f2ec;margin-bottom:16px}
+  .cta-section p{color:#8a8a8a;font-size:16px;margin-bottom:40px;max-width:500px;margin-left:auto;margin-right:auto}
+  .cta-section .btn-primary{background:#fff;color:#1a1a1a}
+  .cta-section .btn-primary:hover{background:#e8e0d4}
+  .cta-section .small{font-size:13px;color:#5a5a5a;margin-top:16px}
+
+  /* ── Footer ── */
+  footer{padding:40px 32px;text-align:center;font-size:12px;color:#8a8a8a;border-top:1px solid #f0ece6}
+  footer .sep{color:#d4c8b8;padding:0 8px}
+
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr;padding:40px 0;text-align:center}
+    .hero-content .sub{margin-left:auto;margin-right:auto}
+    .hero-cta-group{justify-content:center}
+    .hero-stats{justify-content:center}
+    .service-grid,.testimonial-grid{grid-template-columns:1fr}
+    nav .nav-links{display:none}
+    .hero-content h1{font-size:36px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Parkview <em>Dental</em></div>
+  <ul class="nav-links">
+    <li><a href="#">Services</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Insurance</a></li>
+    <li><a href="#">Reviews</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <a href="#" class="nav-cta">(212) 555-0192</a>
+</nav>
+
+<section class="hero container">
+  <div class="hero-content">
+    <h1>Dentistry that <span class="accent">actually fits</span> your schedule</h1>
+    <p class="sub">From routine cleanings to same-day crowns — we see you within 24 hours, not weeks. Most insurances accepted. New patients welcome.</p>
+    <div class="hero-cta-group">
+      <a href="#" class="btn-primary">Book Online →</a>
+      <a href="#" class="btn-secondary">See Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">4.9★</div><div class="label">Google Reviews</div></div>
+      <div class="hero-stat"><div class="num">24hr</div><div class="label">Avg Wait Time</div></div>
+      <div class="hero-stat"><div class="num">92%</div><div class="label">5-Star Rate</div></div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-img-wrap">
+      <div class="img-placeholder">
+        <span>🦷</span>
+        Modern dental practice photo
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar container">
+  <p>Accepted Insurance Plans</p>
+  <div class="trust-logos">
+    <span class="trust-logo">Aetna</span>
+    <span class="trust-logo">Cigna</span>
+    <span class="trust-logo">Delta Dental</span>
+    <span class="trust-logo">MetLife</span>
+    <span class="trust-logo">UnitedHealthcare</span>
+    <span class="trust-logo">Medicare</span>
+  </div>
+</div>
+
+<section class="services">
+  <div class="container">
+    <div class="section-label">Our Services</div>
+    <h2>Everything you need under one roof</h2>
+    <p class="section-sub">Comprehensive care for your whole family — from toddlers to grandparents.</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <span class="service-icon">🛡️</span>
+        <h3>Cleanings & Exams</h3>
+        <p>Professional cleaning, oral cancer screening, and digital X-rays. Recommended every 6 months.</p>
+        <div class="price">From $85 · Most insurance covers 100%</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🦷</span>
+        <h3>Restorative</h3>
+        <p>Fillings, crowns, bridges, and implants. Same-day CEREC crowns — no temporary, no second visit.</p>
+        <div class="price">From $150 · Call for estimate</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">✨</span>
+        <h3>Cosmetic</h3>
+        <p>Teeth whitening, veneers, Invisalign. Custom treatment plans with digital smile preview.</p>
+        <div class="price">From $200 · Free consultation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-label">Patient Stories</div>
+    <h2>Why families trust us</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"I called at 8am with a toothache. They saw me at 10am, fixed the issue by noon, and the follow-up call the next day surprised me — that's service you don't see anymore."</p>
+        <div class="author">Sarah M. <span>· Patient since 2021</span></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="text">"My 4-year-old actually looks forward to dentist visits now. Dr. Chen is amazing with kids — patient, gentle, and explains everything to them."</p>
+        <div class="author">James K. <span>· Father of two</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>New patients get a free exam</h2>
+    <p>Comprehensive exam + digital X-rays + personalized treatment plan. No obligation, no pressure.</p>
+    <a href="#" class="btn-primary">Claim Your Free Visit →</a>
+    <div class="small">or call (212) 555-0192 · Mon–Sat 8am–7pm</div>
+  </div>
+</section>
+
+<footer>
+  142 Court Street, Brooklyn NY 11201
+  <span class="sep">·</span>
+  (212) 555-0192
+  <span class="sep">·</span>
+  hello@parkviewdental.com<br>
+  <em style="color:#b8b0a8;font-style:normal">Designed with AI · Built for portfolio</em>
+</footer>
+
+</body>
+</html>

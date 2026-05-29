@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lily's Nail Spa · Fresh. Clean. Yours.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,sans-serif;background:#fcf9f6;color:#1a1a1a;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .container{max-width:1100px;margin:0 auto;padding:0 32px}
+
+  /* ── Nav ── */
+  nav{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;max-width:1100px;margin:0 auto}
+  .logo{font-family:'DM Serif Display',serif;font-size:22px;color:#4a2a2a;letter-spacing:-.01em}
+  .logo em{font-style:italic;color:#c08070}
+  nav .nav-links{display:flex;gap:28px;list-style:none;font-size:13px;color:#6a5a5a}
+  nav .nav-links a{text-decoration:none;color:inherit;transition:color .2s}
+  nav .nav-links a:hover{color:#c08070}
+  .nav-cta{font-size:12px;font-weight:500;padding:10px 22px;background:#c08070;color:#fff;border-radius:6px;text-decoration:none;transition:background .2s}
+  .nav-cta:hover{background:#a06050}
+
+  /* ── Hero ── */
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:60px 0 80px;align-items:center}
+  .hero-content h1{font-family:'DM Serif Display',serif;font-size:48px;font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
+  .hero-content h1 .accent{color:#c08070;font-style:italic}
+  .hero-content .sub{font-size:17px;color:#5a5a5a;line-height:1.7;margin-bottom:28px;max-width:440px}
+  .hero-strip{display:flex;gap:32px;margin-bottom:28px}
+  .hero-strip-item{text-align:center}
+  .hero-strip-item .num{font-family:'DM Serif Display',serif;font-size:24px;color:#c08070}
+  .hero-strip-item .label{font-size:11px;color:#8a8a8a;margin-top:2px;letter-spacing:.02em}
+  .btn-primary{display:inline-block;padding:14px 32px;background:#c08070;color:#fff;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;transition:background .2s}
+  .btn-primary:hover{background:#a06050}
+  .btn-secondary{display:inline-block;padding:14px 32px;border:1px solid #e0d0c8;border-radius:8px;text-decoration:none;font-size:14px;color:#4a4a4a;transition:all .2s;margin-left:12px}
+  .btn-secondary:hover{border-color:#c08070;color:#c08070}
+  .hero-visual{display:flex;align-items:center;justify-content:center}
+  .hero-visual-inner{width:100%;max-width:460px;aspect-ratio:3/4;border-radius:16px;background:linear-gradient(150deg,#f0ddd5 0%,#e0c8c0 50%,#d0b8b0 100%);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+
+  /* ── Services ── */
+  .services{background:#fff;padding:80px 0;border-radius:20px 20px 0 0}
+  .services .label{font-size:11px;font-weight:600;letter-spacing:.15em;color:#c08070;text-transform:uppercase;margin-bottom:8px;text-align:center}
+  .services h2{font-family:'DM Serif Display',serif;font-size:32px;font-weight:400;text-align:center;margin-bottom:40px}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:800px;margin:0 auto}
+  .service-card{padding:28px 20px;border-radius:10px;border:1px solid #f0ece6;text-align:center;transition:border-color .2s}
+  .service-card:hover{border-color:#e0c8c0}
+  .service-card h3{font-size:15px;font-weight:600;margin-bottom:4px}
+  .service-card .amt{font-family:'DM Serif Display',serif;font-size:28px;color:#c08070;margin-bottom:2px}
+  .service-card .note{font-size:12px;color:#8a8a8a;margin-bottom:12px}
+  .service-card ul{list-style:none;font-size:13px;color:#6a6a6a;line-height:2;text-align:center}
+  .service-card .badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.08em;color:#fff;background:#c08070;padding:2px 8px;border-radius:4px;margin-bottom:8px;text-transform:uppercase}
+
+  /* ── Gallery ── */
+  .gallery{padding:80px 0}
+  .gallery .label{font-size:11px;font-weight:600;letter-spacing:.15em;color:#c08070;text-transform:uppercase;margin-bottom:8px;text-align:center}
+  .gallery h2{font-family:'DM Serif Display',serif;font-size:32px;font-weight:400;text-align:center;margin-bottom:8px}
+  .gallery .sub{text-align:center;color:#8a8a8a;font-size:14px;margin-bottom:40px}
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:700px;margin:0 auto}
+  .gallery-item{aspect-ratio:1;border-radius:10px;background:#f5f0ea;border:1px solid #f0ece6;display:flex;align-items:center;justify-content:center;font-size:13px;color:#8a8a8a;transition:border-color .2s}
+  .gallery-item.featured{grid-column:span 2;grid-row:span 2}
+  .gallery-item:hover{border-color:#c08070}
+
+  /* ── CTA ── */
+  .cta-section{text-align:center;padding:80px 0;background:#4a2a2a;border-radius:20px 20px 0 0}
+  .cta-section h2{font-family:'DM Serif Display',serif;font-size:36px;font-weight:400;color:#f5f2ec;margin-bottom:12px}
+  .cta-section p{color:#b4a098;font-size:15px;margin-bottom:32px;max-width:460px;margin-left:auto;margin-right:auto}
+  .cta-section .btn-primary{background:#fff;color:#4a2a2a}
+  .cta-section .btn-primary:hover{background:#f0e0d8}
+  .cta-section .small{font-size:12px;color:#a08070;margin-top:14px}
+
+  footer{padding:32px;text-align:center;font-size:12px;color:#8a8a8a;border-top:1px solid #ece6e0}
+
+  @media(max-width:800px){
+    .hero{grid-template-columns:1fr;padding:40px 0;text-align:center}
+    .hero-content .sub{margin-left:auto;margin-right:auto}
+    .hero-strip{justify-content:center}
+    .service-grid,.gallery-grid{grid-template-columns:1fr}
+    .gallery-item.featured{grid-column:span 1;grid-row:span 1}
+    nav .nav-links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Lily's <em>Nail Spa</em></div>
+  <ul class="nav-links">
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Gallery</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Book</a></li>
+  </ul>
+  <a href="#" class="nav-cta">(718) 555-0734</a>
+</nav>
+
+<section class="hero container">
+  <div class="hero-content">
+    <h1>Fresh nails,<br><span class="accent">zero wait</span></h1>
+    <p class="sub">Gel, acrylic, dip powder — all done in under an hour. Clean, modern, walk-in friendly. Greenpoint's favorite nail spot since 2021.</p>
+    <div class="hero-strip">
+      <div class="hero-strip-item"><div class="num">4.9★</div><div class="label">Google</div></div>
+      <div class="hero-strip-item"><div class="num">15min</div><div class="label">Avg Wait</div></div>
+      <div class="hero-strip-item"><div class="num">98%</div><div class="label">Return Rate</div></div>
+    </div>
+    <div>
+      <a href="#" class="btn-primary">Book Appointment</a>
+      <a href="#" class="btn-secondary">See Pricing</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-visual-inner">
+      <div class="text" style="color:#fff;text-align:center;font-size:14px;letter-spacing:.08em"></div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <div class="label">Our Menu</div>
+    <h2>Simple pricing, exceptional quality</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Classic Manicure</h3>
+        <div class="amt">$25</div>
+        <div class="note">30 min</div>
+        <ul>
+          <li>Shape + file + buff</li>
+          <li>Cuticle care</li>
+          <li>Polish application</li>
+          <li>5-min hand massage</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <span class="badge">Most Popular</span>
+        <h3>Gel Mani + Pedi</h3>
+        <div class="amt">$55</div>
+        <div class="note">60 min</div>
+        <ul>
+          <li>Gel polish, hands & feet</li>
+          <li>Exfoliating sugar scrub</li>
+          <li>Paraffin wax dip</li>
+          <li>50+ colors to choose</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Dip Powder Set</h3>
+        <div class="amt">$45</div>
+        <div class="note">45 min · Lasts 3+ weeks</div>
+        <ul>
+          <li>Dip powder application</li>
+          <li>Strengthening base coat</li>
+          <li>Glossy top finish</li>
+          <li>60+ color options</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery container">
+  <div class="label">Portfolio</div>
+  <h2>Follow us @lilysnailspa</h2>
+  <p class="sub">Real work, real clients — see why Greenpoint loves us.</p>
+  <div class="gallery-grid">
+    <div class="gallery-item featured">🌸 Gel Art</div>
+    <div class="gallery-item">💖 Pink Set</div>
+    <div class="gallery-item">✨ Dip Ombre</div>
+    <div class="gallery-item">🦋 Butterfly</div>
+    <div class="gallery-item">🌿 French Tips</div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>New clients save 10%</h2>
+    <p>First gel set? Mention this page and get 10% off. Walk-ins welcome 7 days a week.</p>
+    <a href="#" class="btn-primary">Book Your Appointment →</a>
+    <div class="small">72 Manhattan Ave, Greenpoint · (718) 555-0734 · Walk-ins welcome</div>
+  </div>
+</section>
+
+<footer>
+  72 Manhattan Ave, Brooklyn NY 11222 &nbsp;·&nbsp; (718) 555-0734<br>
+  <em style="color:#b8b0a8;font-style:normal">AI-powered design · Built for portfolio</em>
+</footer>
+
+</body>
+</html>

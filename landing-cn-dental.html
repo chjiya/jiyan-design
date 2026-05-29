@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鹏程口腔 · 让看牙不再等</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans SC','Inter',-apple-system,sans-serif;background:#fcf9f6;color:#1a1a1a;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+  .container{max-width:1200px;margin:0 auto;padding:0 32px}
+
+  /* ── Nav ── */
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1200px;margin:0 auto}
+  .logo{font-family:'Noto Serif SC',serif;font-size:20px;color:#1a1a1a}
+  .logo em{font-style:italic;color:#8b7355}
+  nav .nav-links{display:flex;gap:28px;list-style:none;font-size:14px;color:#5a5a5a}
+  nav .nav-links a{text-decoration:none;color:inherit;transition:color .2s}
+  nav .nav-links a:hover{color:#1a1a1a}
+  .nav-cta{font-size:13px;font-weight:500;padding:10px 22px;background:#1a1a1a;color:#fff;border-radius:6px;text-decoration:none}
+  .nav-cta:hover{background:#333}
+
+  /* ── Hero ── */
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:60px 0 100px;align-items:center}
+  .hero-content h1{font-family:'Noto Serif SC',serif;font-size:44px;font-weight:400;line-height:1.15;margin-bottom:20px}
+  .hero-content h1 .accent{color:#8b7355}
+  .hero-content .sub{font-size:16px;color:#5a5a5a;line-height:1.8;margin-bottom:32px;max-width:480px}
+  .hero-cta-group{display:flex;gap:16px;align-items:center}
+  .btn-primary{display:inline-block;padding:14px 32px;background:#1a1a1a;color:#fff;border-radius:8px;text-decoration:none;font-size:15px;font-weight:500}
+  .btn-primary:hover{background:#333}
+  .btn-secondary{display:inline-block;padding:14px 32px;border:1px solid #d4c8b8;border-radius:8px;text-decoration:none;font-size:15px;color:#4a4a4a}
+  .btn-secondary:hover{border-color:#8b7355;color:#8b7355}
+  .hero-stats{display:flex;gap:40px;margin-top:40px}
+  .hero-stat{text-align:center}
+  .hero-stat .num{font-family:'Noto Serif SC',serif;font-size:28px;color:#8b7355}
+  .hero-stat .label{font-size:12px;color:#7a7a7a;margin-top:2px}
+  .hero-image{position:relative;display:flex;align-items:center;justify-content:center}
+  .hero-img-wrap{width:100%;max-width:500px;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#e8e0d4 0%,#d4c8b8 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px rgba(0,0,0,.06);color:#8a7a6a;font-size:14px}
+
+  /* ── Trust ── */
+  .trust-bar{text-align:center;padding:40px 0 60px}
+  .trust-bar p{font-size:12px;font-weight:500;letter-spacing:.12em;color:#8a8a8a;margin-bottom:24px}
+  .trust-logos{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+  .trust-logo{font-size:14px;color:#888;font-weight:500}
+
+  /* ── Services ── */
+  .services{background:#fff;padding:100px 0;border-radius:24px 24px 0 0}
+  .services .section-label{font-size:11px;font-weight:600;letter-spacing:.15em;color:#8b7355;margin-bottom:8px;text-align:center}
+  .services h2{font-family:'Noto Serif SC',serif;font-size:32px;font-weight:400;text-align:center;margin-bottom:16px}
+  .services .section-sub{text-align:center;color:#7a7a7a;font-size:15px;margin-bottom:60px}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .service-card{padding:36px 28px;border-radius:12px;border:1px solid #f0ece6;transition:all .3s}
+  .service-card:hover{border-color:#d4c8b8;box-shadow:0 8px 32px rgba(0,0,0,.04)}
+  .service-icon{font-size:28px;display:block;margin-bottom:16px}
+  .service-card h3{font-size:17px;font-weight:600;margin-bottom:8px}
+  .service-card p{font-size:14px;color:#6a6a6a;line-height:1.8}
+  .service-card .price{font-size:13px;color:#8b7355;margin-top:12px;font-weight:500}
+
+  /* ── Testimonials ── */
+  .testimonials{padding:100px 0;background:#fcf9f6}
+  .testimonials .section-label{font-size:11px;font-weight:600;letter-spacing:.15em;color:#8b7355;margin-bottom:8px;text-align:center}
+  .testimonials h2{font-family:'Noto Serif SC',serif;font-size:32px;font-weight:400;text-align:center;margin-bottom:60px}
+  .testimonial-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:800px;margin:0 auto}
+  .testimonial-card{padding:32px;background:#fff;border-radius:12px;border:1px solid #f0ece6}
+  .testimonial-card .text{font-size:15px;color:#4a4a4a;line-height:1.8;margin-bottom:16px}
+  .testimonial-card .author{font-size:13px;font-weight:600}
+  .testimonial-card .author span{font-weight:400;color:#8a8a8a}
+
+  /* ── CTA ── */
+  .cta-section{text-align:center;padding:100px 0;background:#1a1a1a;border-radius:0 0 24px 24px}
+  .cta-section h2{font-family:'Noto Serif SC',serif;font-size:36px;font-weight:400;color:#f5f2ec;margin-bottom:16px}
+  .cta-section p{color:#8a8a8a;font-size:15px;margin-bottom:40px;max-width:500px;margin-left:auto;margin-right:auto}
+  .cta-section .btn-primary{background:#fff;color:#1a1a1a}
+  .cta-section .btn-primary:hover{background:#e8e0d4}
+  .cta-section .small{font-size:13px;color:#5a5a5a;margin-top:16px}
+
+  footer{padding:40px 32px;text-align:center;font-size:12px;color:#8a8a8a;border-top:1px solid #f0ece6}
+
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr;padding:40px 0;text-align:center}
+    .hero-content .sub{margin-left:auto;margin-right:auto}
+    .hero-cta-group,.hero-stats{justify-content:center}
+    .service-grid,.testimonial-grid{grid-template-columns:1fr}
+    nav .nav-links{display:none}
+    .hero-content h1{font-size:32px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">鹏程 <em>口腔</em></div>
+  <ul class="nav-links">
+    <li><a href="#">服务项目</a></li>
+    <li><a href="#">关于我们</a></li>
+    <li><a href="#">医保报销</a></li>
+    <li><a href="#">患者评价</a></li>
+    <li><a href="#">联系我们</a></li>
+  </ul>
+  <a href="#" class="nav-cta">010-8888-0192</a>
+</nav>
+
+<section class="hero container">
+  <div class="hero-content">
+    <h1>看牙不用等<br><span class="accent">当天预约当天看</span></h1>
+    <p class="sub">从洗牙到种植牙，24小时内安排就诊，不用排队等几周。大部分医保可报销，新患者免费检查。</p>
+    <div class="hero-cta-group">
+      <a href="#" class="btn-primary">在线预约 →</a>
+      <a href="#" class="btn-secondary">了解服务</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">4.9★</div><div class="label">患者评分</div></div>
+      <div class="hero-stat"><div class="num">24h</div><div class="label">平均等候</div></div>
+      <div class="hero-stat"><div class="num">92%</div><div class="label">五星好评</div></div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-img-wrap">🦷 鹏程口腔 · 温馨就诊环境</div>
+  </div>
+</section>
+
+<div class="trust-bar container">
+  <p>合作医保单位</p>
+  <div class="trust-logos">
+    <span class="trust-logo">城镇职工医保</span>
+    <span class="trust-logo">城乡居民医保</span>
+    <span class="trust-logo">商业保险直赔</span>
+    <span class="trust-logo">儿童口腔医保</span>
+  </div>
+</div>
+
+<section class="services">
+  <div class="container">
+    <div class="section-label">服务项目</div>
+    <h2>一站解决全家口腔问题</h2>
+    <p class="section-sub">从3岁到80岁，每个人都能在这里找到适合的诊疗方案。</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <span class="service-icon">🛡️</span>
+        <h3>洗牙 & 检查</h3>
+        <p>专业洁牙、口腔癌筛查、数字X光片。建议每半年一次，大部分医保全额报销。</p>
+        <div class="price">起价 ¥85 · 医保可全额报销</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🦷</span>
+        <h3>修复治疗</h3>
+        <p>补牙、牙冠、种植牙。CEREC 3D即刻修复——当天取模当天戴牙，不用来回跑。</p>
+        <div class="price">起价 ¥150 · 免费咨询</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">✨</span>
+        <h3>美学修复</h3>
+        <p>牙齿美白、贴面、隐形矫正。数字化微笑设计，做前先看效果。分期付款可办理。</p>
+        <div class="price">起价 ¥200 · 免费面诊</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-label">患者心声</div>
+    <h2>为什么大家都选我们</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p class="text">"早上8点牙疼打电话，10点就看上了，中午就处理好了。第二天还专门打电话回访问我怎么样了——现在哪有这样的服务。"</p>
+        <div class="author">张女士 <span>· 就诊3年</span></div>
+      </div>
+      <div class="testimonial-card">
+        <p class="text">"我家4岁女儿现在每次说要去看牙医都特别高兴。陈医生特别有耐心，会给小孩解释每一步在做什么，完全不害怕。"</p>
+        <div class="author">李先生 <span>· 孩子家长</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>新患者免费口腔检查</h2>
+    <p>全面检查 + 数字X光片 + 个性化治疗方案。无强制消费，无隐形收费。</p>
+    <a href="#" class="btn-primary">预约免费检查 →</a>
+    <div class="small">或拨打 010-8888-0192 · 周一至周六 8:00-19:00</div>
+  </div>
+</section>
+
+<footer>
+  北京市朝阳区建国路88号 &nbsp;·&nbsp; 010-8888-0192 &nbsp;·&nbsp; hello@penkqiang.com<br>
+  <em style="color:#b8b0a8;font-style:normal">AI 辅助设计 · 作品集用</em>
+</footer>
+
+</body>
+</html>

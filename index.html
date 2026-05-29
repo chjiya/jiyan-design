@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Landing Pages · Portfolio</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Helvetica Neue",sans-serif;background:#fcf9f6;color:#1a1a1a;line-height:1.5}
+  
+  .header{text-align:center;padding:80px 24px 40px;max-width:800px;margin:0 auto}
+  .header h1{font-size:40px;font-weight:400;margin-bottom:12px}
+  .header h1 em{font-style:italic;color:#8b7355}
+  .header p{color:#6a6a6a;font-size:16px;line-height:1.6}
+  .header .badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.12em;color:#8b7355;text-transform:uppercase;border:1px solid #d4c8b8;padding:4px 10px;border-radius:3px;margin-bottom:20px}
+
+  .projects{max-width:1000px;margin:0 auto;padding:0 24px 80px;display:grid;gap:48px}
+  .project-card{display:flex;gap:40px;align-items:center;background:#fff;border-radius:12px;padding:32px;border:1px solid #f0ece6}
+  .project-card:nth-child(even){flex-direction:row-reverse}
+  .project-preview{width:280px;height:200px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:48px;border:1px solid #f0ece6}
+  .project-info{flex:1}
+  .project-info .industry{font-size:11px;font-weight:600;letter-spacing:.12em;color:#8b7355;text-transform:uppercase;margin-bottom:6px}
+  .project-info h2{font-size:22px;font-weight:500;margin-bottom:6px}
+  .project-info .features{font-size:14px;color:#6a6a6a;line-height:1.6;margin-bottom:6px}
+  .project-info .note{font-size:12px;color:#aaa;font-style:italic;margin-bottom:12px}
+  .project-info .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+  .tag{font-size:11px;padding:3px 8px;background:#f4f0ea;border-radius:100px;color:#6a6a6a}
+  .project-link{font-size:13px;color:#8b7355;text-decoration:none;font-weight:500}
+  .project-link:hover{text-decoration:underline}
+  .footer{text-align:center;padding:40px;font-size:12px;color:#8a8a8a;border-top:1px solid #ece6e0}
+  @media(max-width:768px){
+    .project-card,.project-card:nth-child(even){flex-direction:column}
+    .project-preview{width:100%;height:160px}
+  }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="badge">AI-Powered · 3-Day Delivery · Human-Reviewed</div>
+  <h1>Landing pages that <em>convert</em></h1>
+  <p>$399 per page. Each one is custom-designed, mobile-optimized, and built to get your phone ringing.</p>
+</div>
+
+<div class="projects">
+  <div class="project-card">
+    <div class="project-preview" style="background:linear-gradient(135deg,#f8f4ed,#fff)">🦷</div>
+    <div class="project-info">
+      <div class="industry">Healthcare</div>
+      <h2>Parkview Dental</h2>
+      <div class="features">Typefaces: DM Serif Display + Inter · 4.9★ ratings · Insurance accepted</div>
+      <div class="note">Premium version — proper typography, trust signals, service pricing</div>
+      <div class="tags">
+        <span class="tag">DM Serif Display</span>
+        <span class="tag">Trust Bar</span>
+        <span class="tag">Pricing Cards</span>
+        <span class="tag">Testimonials</span>
+      </div>
+      <a href="landing-demo-dental-v2.html" class="project-link">View Live →</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-preview" style="background:linear-gradient(135deg,#e8e0d4,#f0ece6);font-size:48px">🧘</div>
+    <div class="project-info">
+      <div class="industry">Wellness</div>
+      <h2>Sunrise Yoga Studio</h2>
+      <div class="features">DM Serif Display + Inter · Weekly schedule · 3 class types · Free trial</div>
+      <div class="note">Premium version — full schedule grid, philosophy section, transparent pricing</div>
+      <div class="tags">
+        <span class="tag">Schedule Grid</span>
+        <span class="tag">3-Tier Pricing</span>
+        <span class="tag">Philosophy</span>
+      </div>
+      <a href="landing-demo-yoga-v2.html" class="project-link">View Live →</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-preview" style="background:linear-gradient(135deg,#f0e0d8,#faf8f4);font-size:48px">💅</div>
+    <div class="project-info">
+      <div class="industry">Beauty</div>
+      <h2>Lily's Nail Spa</h2>
+      <div class="features">DM Serif Display + Inter · Service menu · Gallery grid · Stats trust bar</div>
+      <div class="note">Premium version — pricing cards with badges, gallery, trust signals</div>
+      <div class="tags">
+        <span class="tag">Service Menu</span>
+        <span class="tag">Gallery Grid</span>
+        <span class="tag">Trust Bar</span>
+      </div>
+      <a href="landing-demo-nail-v2.html" class="project-link">View Live →</a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  AI-powered landing pages starting at $399 · Built with Huashu-Design · Portfolio for Upwork
+</div>
+</body>
+</html>
