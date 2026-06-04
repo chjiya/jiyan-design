@@ -1,24 +1,19 @@
-Subject: A website for And Yoga Studios?
+Subject: Your Bed-Stuy studio deserves a website
 
 Hi there,
 
-I came across And Yoga Studios on Yelp — 41 reviews, first yoga studio in Bed-Stuy, aerial classes. You've clearly built something special in the neighborhood.
+And Yoga Studios has been part of Bed-Stuy since 2014 — first yoga studio in the neighborhood, aerial classes, 41 five-star reviews on Yelp. That's an impressive track record.
 
-But I noticed you don't have a website yet. In 2026, most new students find studios by searching online first. Without a website, you're invisible to that whole pipeline of potential students.
+But here's what I noticed: when someone searches "yoga studio Bedford-Stuyvesant" on Google, you don't show up. They find your competitors instead.
 
-I build clean, affordable landing pages for wellness businesses. Here's what I'd include for And Yoga:
+A simple website changes that. It's your digital storefront — open 24/7, showing your schedule, pricing, and what makes And Yoga special.
 
-→ Class schedule (aerial, vinyasa, etc.)
-→ Pricing + membership options
-→ Free trial / first class signup
-→ Google Maps location + contact
-→ Mobile-friendly (90% of searches happen on phone)
-→ Instagram feed integration (@andyogastudios)
+I've built similar pages for other small businesses in Brooklyn:
+https://chjiya.github.io/jiyan-design/ (portfolio)
 
-Here's an example I made for a similar yoga studio:
-https://chjiya.github.io/jiyan-design/landing-demo-yoga-v2.html
+If you're interested, I can create a custom design for And Yoga — tailored to your brand, your classes, your vibe. $399, draft in 3 days.
 
-I can have a first draft ready in 3 days for $399. Want to see a quick mockup?
+Want to hop on a quick call this week?
 
 Best,
 Chen Jiyan
